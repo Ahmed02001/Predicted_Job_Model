@@ -43,7 +43,7 @@ def predict():
         predicted_job = model.predict(new_skills_encoded)
 
         # Return the prediction
-        return jsonify({'predicted_job': predicted_job[0]})
+        return jsonify(predicted_job[0])
 
     except ValueError as e:
         return jsonify({'error': f'Input Error: {str(e)}'}), 400
